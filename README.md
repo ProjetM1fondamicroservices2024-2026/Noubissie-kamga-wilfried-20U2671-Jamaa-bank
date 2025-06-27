@@ -1,29 +1,16 @@
-# Banking Admin Dashboard
+# jamaa_frontend_mobile
 
-Interface d'administration pour application bancaire construite avec React, Vite et Tailwind CSS.
+A new Flutter project.
 
-## Installation
+## Getting Started
 
-```bash
-npm install
-npm run dev
-```
+This project is a starting point for a Flutter application.
 
-## Structure du projet
+A few resources to get you started if this is your first Flutter project:
 
-- `/src/components` - Composants réutilisables
-- `/src/pages` - Pages de l'application
-- `/src/services` - Services API
-- `/src/store` - Gestion d'état global
-- `/src/hooks` - Hooks personnalisés
-- `/src/utils` - Fonctions utilitaires
+- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
+- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-## Fonctionnalités
-
-- 🔐 Authentification
-- 📈 Dashboard analytique
-- 👥 Gestion des utilisateurs
-- 🏦 Gestion des comptes
-- 💸 Gestion des transactions
-- 💰 Gestion des prêts
-- ⚙️ Paramètres système
+For help getting started with Flutter development, view the
+[online documentation](https://docs.flutter.dev/), which offers tutorials,
+samples, guidance on mobile development, and a full API reference.
