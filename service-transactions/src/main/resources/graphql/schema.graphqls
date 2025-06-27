@@ -1,0 +1,34 @@
+enum TransactionType {
+    TRANSFERT,
+    DEPOT,
+    RETRAIT,
+    RECHARGE,
+    VIREMENT
+}
+
+enum TransactionStatus {
+    FAILED,
+    SUCCESS
+}
+
+type Transaction {
+    transactionId: ID!
+    transactionType: TransactionType!
+    idAccountSender: ID!
+    idAccountReceiver: ID!
+    amount: String!
+    status: TransactionStatus!
+    createdAt: String!
+    dateEvent: String!
+    bankId: ID!
+}
+
+type Query {
+    getAllTransactions: [Transaction!]
+    getTransactionByIdAccount(idAccount: ID!): [Transaction!]
+    getTransactionsByUserId(userId: ID!): [Transaction!]
+}
+
+type Mutation {
+    deleteTransactionStream: String
+}
