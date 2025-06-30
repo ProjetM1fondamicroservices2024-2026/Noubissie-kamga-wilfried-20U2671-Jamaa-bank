@@ -14,10 +14,10 @@
 	<name>service-recharge-retrait</name>
 	<description>Demo project for Spring Boot</description>
 	<url/>
-	<licenses>
+	<licenses> 
 		<license/>
 	</licenses>
-	<developers>
+	<developers> 
 		<developer/>
 	</developers>
 	<scm>

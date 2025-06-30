@@ -16,3 +16,4 @@ ENV SPRING_CLOUD_CONFIG_SERVER_GIT_URI=https://github.com/Noubissie237/jamaa-con
 EXPOSE 8082
 
 ENTRYPOINT ["java", "-jar", "/app/service-users.jar"]
+ 

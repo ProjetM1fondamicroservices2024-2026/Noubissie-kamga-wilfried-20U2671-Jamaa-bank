@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "🔄 Mise à jour des images vers Docker Hub..."
+echo " Mise à jour des images vers Docker Hub..."
 
 SERVICES_DIR="services"
 
@@ -11,16 +11,16 @@ update_image() {
     local new_image="noubissie237/jamaa-project-service-$service:latest"
     
     if [ -f "$file" ]; then
-        echo "🔄 Mise à jour de $service..."
+        echo " Mise à jour de $service..."
         sed -i "s|image: jamaa/service-$service:latest|image: $new_image|g" "$file"
-        echo "✅ Fichier YAML de $service mis à jour ✅"
+        echo " Fichier YAML de $service mis à jour "
 
-        echo "📥 Pull de l'image $new_image..."
+        echo " Pull de l'image $new_image..."
         docker pull "$new_image"
 
-        echo "✅ Image $new_image pullée avec succès"
+        echo "Image $new_image pullée avec succès"
     else
-        echo "⚠️ Fichier $file non trouvé"
+        echo " Fichier $file non trouvé"
     fi
 }
 
@@ -42,8 +42,8 @@ for service in "${services[@]}"; do
 done
 
 echo ""
-echo "✅ Toutes les images ont été mises à jour et pullées avec succès !"
-echo "📋 Images utilisées et pullées :"
+echo " Toutes les images ont été mises à jour et pullées avec succès !"
+echo "Images utilisées et pullées :"
 echo "   - noubissie237/jamaa-project-service-config:latest"
 echo "   - noubissie237/jamaa-project-service-register:latest"
 echo "   - noubissie237/jamaa-project-service-proxy:latest"

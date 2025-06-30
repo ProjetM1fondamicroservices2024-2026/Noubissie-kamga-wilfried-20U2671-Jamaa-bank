@@ -2,11 +2,11 @@
 # export KUBECONFIG=/var/lib/jenkins/.kube/config
 
 # Script de déploiement Kubernetes pour Jamaa Backend
-echo "🚀 Déploiement de Jamaa Backend sur Kubernetes"
+echo " Déploiement de Jamaa Backend sur Kubernetes"
 
 # Vérifier que kubectl est configuré
 if ! kubectl cluster-info &> /dev/null; then
-    echo "❌ Erreur: kubectl n'est pas configuré ou le cluster n'est pas accessible"
+    echo " Erreur: kubectl n'est pas configuré ou le cluster n'est pas accessible"
     exit 1
 fi
 
