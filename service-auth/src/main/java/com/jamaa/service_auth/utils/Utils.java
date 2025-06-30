@@ -16,26 +16,26 @@ import org.springframework.beans.factory.annotation.Value;
 @Component
 public class Utils {
     
-    @Value("${jwt.secret}")
-    private String secretKey;
+    @Value("${jwt.secret}") 
+    private String secretKey; 
 
-    public String generateToken(JSONObject customer) {
-        SecretKey key = Keys.hmacShaKeyFor(secretKey.getBytes());
+    public String generateToken(JSONObject customer) { 
+        SecretKey key = Keys.hmacShaKeyFor(secretKey.getBytes()); 
 
-        Date now = new Date();
-        Date expiryDate = new Date(now.getTime() + (24 * 60 * 60 * 1000));
+        Date now = new Date(); 
+        Date expiryDate = new Date(now.getTime() + (24 * 60 * 60 * 1000)); 
 
         JwtBuilder builder = Jwts.builder()
-            .setSubject(customer.getString("email"))
-            .setIssuedAt(now)
-            .setExpiration(expiryDate)
-            .signWith(key)
-            .claim("id", customer.getLong("id"))
-            .claim("email", customer.getString("email"))
+            .setSubject(customer.getString("email")) 
+            .setIssuedAt(now) 
+            .setExpiration(expiryDate) 
+            .signWith(key) 
+            .claim("id", customer.getLong("id")) 
+            .claim("email", customer.getString("email")) 
             .claim("phone", customer.getString("phone"))
-            .claim("lastName", customer.getString("lastName"))
-            .claim("firstName", customer.getString("firstName"));
+            .claim("lastName", customer.getString("lastName")) 
+            .claim("firstName", customer.getString("firstName")); 
 
-        return builder.compact();
+        return builder.compact(); 
     }
 }
